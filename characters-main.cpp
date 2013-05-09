@@ -1,20 +1,23 @@
 #include <iostream>
 #include <cctype>
-#include <string>
+
+/* Essayez par exemple de réaliser un programme qui remplace
+tous les espaces d'une string par le symbole #. */
 
 int main()
 {
-  char character;
+  std::string input;
 
-  std::cout << "Enter a character:  ";
-  std::cin >> character;
+  std::cout << "Enter a sentence:  ";
+  getline(std::cin, input);
 
-  if(isdigit(character))
-    std::cout << character << " is a digit." << std::endl;
-  else if(isalpha(character))
-    { if(isupper(character))
-        std::cout << character << " is an uppercase letter." << std::endl;
-      else std::cout << character << " is a lowercase letter." << std::endl; }
+  int inputSize = input.size();
+
+  for(int i=0; i<inputSize; i++)
+    if(isspace(input[i]))
+      input[i]='#';
+
+  std::cout << input;
 
   return 0;
 }
