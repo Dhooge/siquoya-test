@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cctype>
+#include <string>
 
 /* Essayez par exemple de réaliser un programme qui remplace
 tous les espaces d'une string par le symbole #. */
