@@ -7,7 +7,7 @@ int main()
   char character;
 
   std::cout << "Enter a character:  ";
-  std::cin >> character;;
+  std::cin >> character;
 
   if(isdigit(character))
     std::cout << character << " is a digit." << std::endl;
